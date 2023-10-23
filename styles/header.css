@@ -1,0 +1,34 @@
+.header {
+    background-color: #ff000044;
+    padding: 50px 10px;
+    color: black;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.logoHeader {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid #a70f0f;
+}
+
+.logoImg {
+    max-width: 100%; /* Make sure the image is not wider than its container */
+    height: auto;     /* Maintain the aspect ratio */
+  }
+
+.burger-icon {
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 2; /* Ensure the burger icon appears above other content */
+  }

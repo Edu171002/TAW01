@@ -1,0 +1,155 @@
+/* Reset some default styles for the body and header */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #432B14;
+    color: #CFCDCA;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C4C5B;
+    color: #CFCDCA;
+    padding: 10px 20px;
+}
+
+/* Logo styles */
+.logo {
+    text-align: center; /* Center the logo horizontally */
+    flex: 1;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+/* Add this to styles.css */
+
+/* Hide the side navigation by default */
+.side-nav {
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #CFCDCA;
+    overflow-x: hidden;
+    transition: 0.5s; /*Transición desplegable*/
+    padding-top: 60px;
+    z-index: 1;
+}
+
+.side-nav.open {
+    width: 50%;
+}
+
+.side-nav a {
+    padding: 15px;
+    text-decoration: none;
+    text-align: justify;
+    font-size: 25px;
+    color: #2C4C5B;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #CFCDCA;
+    background-color: #65849C;
+}
+
+.side-nav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Burger menu icon styles */
+.burger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    order: -1; 
+}
+
+.burger-menu .bar {
+    background-color: #CFCDCA;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    border-radius: 3px;
+}
+
+/* Estilo para los elementos del About Us */
+.aboutus-text {
+    text-align: justify;
+    color: #CFCDCA;
+    padding: 10px 40px 0px;
+    line-height: 1.5;
+}
+
+.aboutus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.aboutus-square {
+  padding: 30px;
+  background-color: #CFCDCA;
+  color: #2C4C5B;
+  height: auto;
+  border-radius: 5px;
+}
+
+.aboutus-img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;  
+  object-fit: cover;
+}
+
+.aboutus-name {
+  text-align: left;
+}
+
+/* Estilo para el footer. Copiar este sobre el de todos */
+footer {
+    align-items: center;
+    background-color: #2C4C5B;
+    color: #CFCDCA;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/*
+*
+*
+*/
+* {box-sizing:border-box}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+#main{
+  transition: margin-left .5s;
+}
+
+
