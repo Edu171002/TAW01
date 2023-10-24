@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8">
     <title>Your Website</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <!-- Sidebar navigation -->
     <div class="side-nav">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
-        <a href="#">Inicio</a>
-        <a href="#">Contacto</a>
-        <a href="#">Acerca de nosotros</a>
+        <a href="index.html">Inicio</a>
+        <a href="contact.html">Contacto</a>
+        <a href="aboutus.html">Acerca de nosotros</a>
+        <a href="Cafeespecialidad.html">Cafe de especialidad</a>
+        <a href="Cafedescafeinado.html">Cafe descafeinado</a>
     </div>
 
     <!-- Header with logo and burger menu -->
@@ -24,6 +28,16 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+        <div >
+            <!--Esto hay que probarlo en un servidor
+            <a id="cargarDatos"><i class="fa fa-shopping-cart"        style="font-size:24px;color:whitesmoke"></i></a>
+            <div id="resultado"></div>
+
+            <script src="script.js"></script>
+            -->
+            <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
+            </a>
+        </div>
     </header>
 
     <div id="main">
@@ -32,27 +46,24 @@
 
         <!-- Matrix of products (3x2) -->
         <div class="product-grid">
-            <div class="product">
-                <img class="product-img" src="./imagenes/jon-tyson-KRedbshBxEk-unsplash.jpg" alt="Product 1">
-                <h4 class="product-name">Primo Passo Bag</h4>
-                <p class="product-description">Cafe en grano italiano de muy buena calidad y seleccionado a mano.</p>
-
-            </div>
-            <div class="product">
-                <img class="product-img" src="imagenes/lex-sirikiat-QouiCn7u6kw-unsplash.jpg" alt="Product 2">
-                <h4 class="product-name">Little Nap Coffee Beans</h4>
-                <p class="product-description">Granos de cafe brasileño.</p>
-            </div>
-            <div class="product">
-                <img class="product-img" src="imagenes/andrew-spencer-mPgY84RMMyc-unsplash.jpg" alt="Product 2">
-                <h4 class="product-name">Wood Burl Coffee</h4>
-                <p class="product-description">Granos de cafe seleccionados a mano.</p>
-            </div>
-            <div class="product">
-                <img class="product-img" src="imagenes/kyle-nieber-LtzZy-sTOBI-unsplash.jpg" alt="Product 2">
-                <h4 class="product-name">Good Folks Coffee</h4>
-                <p class="product-description">Granos de cafe descafeinado con toque a canela.</p>
-            </div>
+            
+                <div class="product">
+                    <img class="product-img" src="./imagenes/jon-tyson-KRedbshBxEk-unsplash.jpg" alt="Product 1">
+                    <h4 href="productos/cafePimo.html" class="product-name">Primo Passo Bag</h4>
+                    <p class="product-description">Cafe en grano italiano de muy buena calidad y seleccionado a mano.</p>
+    
+                </div>
+                <div class="product">
+                    <img class="product-img" src="imagenes/lex-sirikiat-QouiCn7u6kw-unsplash.jpg" alt="Product 2">
+                    <h4 href="productos/cafeLittleNap.html"class="product-name">Little Nap Coffee Beans</h4>
+                    <p class="product-description">Granos de cafe brasileño.</p>
+                </div>
+                <div class="product">
+                    <img class="product-img" src="imagenes/andrew-spencer-mPgY84RMMyc-unsplash.jpg" alt="Product 2">
+                    <h4 href="productos/cafeWoodBurl.html"class="product-name">Wood Burl Coffee</h4>
+                    <p class="product-description">Granos de cafe seleccionados a mano.</p>
+                </div>
+            
             <!-- Add more products as needed -->
         </div>
 

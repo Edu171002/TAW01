@@ -10,20 +10,13 @@
     <!-- Sidebar navigation -->
     <div class="side-nav">
         <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
-        <a href="#">Inicio</a>
-        <a href="#">Contacto</a>
-        <a href="#">Acerca de nosotros</a>
+        <a href="index.html">Inicio</a>
+        <a href="#contact-form">Contacto</a>
+        <a href="aboutus.html">Acerca de nosotros</a>
+        <a href="Cafeespecialidad.html">Cafe de especialidad</a>
+        <a href="Cafedescafeinado.html">Cafe descafeinado</a>
     </div>
-    <div >
-            <!--Esto hay que probarlo en un servidor
-            <a id="cargarDatos"><i class="fa fa-shopping-cart"        style="font-size:24px;color:whitesmoke"></i></a>
-            <div id="resultado"></div>
-
-            <script src="script.js"></script>
-            -->
-            <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
-            </a>
-        </div>
+    
     <!-- Header with logo and burger menu -->
     <header>
         <div class="logo">
@@ -33,6 +26,16 @@
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
+        </div>
+        <div >
+            <!--Esto hay que probarlo en un servidor
+            <a id="cargarDatos"><i class="fa fa-shopping-cart"        style="font-size:24px;color:whitesmoke"></i></a>
+            <div id="resultado"></div>
+
+            <script src="script.js"></script>
+            -->
+            <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
+            </a>
         </div>
     </header>
 
@@ -67,33 +70,33 @@
 
         <!-- Matrix of products (3x2) -->
         <div class="product-grid">
-            <div class="product">
+            <div href="productos/cafePimo.html" class="product">
                 <img class="product-img" src="./imagenes/jon-tyson-KRedbshBxEk-unsplash.jpg" alt="Product 1">
-                <h4 class="product-name">Primo Passo Bag</h4>
+                <h4  class="product-name">Primo Passo Bag</h4>
                 <p class="product-description">Cafe en grano italiano de muy buena calidad y seleccionado a mano.</p>
 
             </div>
-            <div class="product">
+            <div href="productos/cafeBattlecreek.html" class="product">
                 <img class="product-img" src="imagenes/battlecreek-coffee-roasters-_1wDmr4dtuk-unsplash.jpg" alt="Product 2">
-                <h4 class="product-name">Battlecreek coffee roasters</h4>
+                <h4  class="product-name">Battlecreek coffee roasters</h4>
                 <p class="product-description">Cafe descafeinado de marca Indie.</p>
             </div>
-            <div class="product">
+            <div href="productos/cafeRpahona.html"class="product">
                 <img class="product-img" src="imagenes/marina-zaharkina-HUvmJiOrOKc-unsplash.jpg" alt="Product 2">
-                <h4 class="product-name">rpahona Beans Bag</h4>
+                <h4  class="product-name">rpahona Beans Bag</h4>
                 <p class="product-description">Cafe descafeinado vegano y sin azucar.</p>
             </div>
-            <div class="product">
+            <div href="productos/cafeLittleNap.html" class="product">
                 <img class="product-img" src="imagenes/lex-sirikiat-QouiCn7u6kw-unsplash.jpg" alt="Product 2">
                 <h4 class="product-name">Little Nap Coffee Beans</h4>
                 <p class="product-description">Granos de cafe brasileño.</p>
             </div>
-            <div class="product">
+            <div href="productos/cafeWoodBurl.html" class="product">
                 <img class="product-img" src="imagenes/andrew-spencer-mPgY84RMMyc-unsplash.jpg" alt="Product 2">
                 <h4 class="product-name">Wood Burl Coffee</h4>
                 <p class="product-description">Granos de cafe seleccionados a mano.</p>
             </div>
-            <div class="product">
+            <div href="productos/cafeGoodFolks.html"class="product" >
                 <img class="product-img" src="imagenes/kyle-nieber-LtzZy-sTOBI-unsplash.jpg" alt="Product 2">
                 <h4 class="product-name">Good Folks Coffee</h4>
                 <p class="product-description">Granos de cafe descafeinado con toque a canela.</p>
@@ -103,7 +106,8 @@
 
 
         <!-- Formulary -->
-        <form class="contact-form">
+        <a name="contact-form"></a>
+        <form class="contact-form" >
             <h2>Contact Us</h2>
             <input type="text" placeholder="Name">
             <input type="email" placeholder="Email">
