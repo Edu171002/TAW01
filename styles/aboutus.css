@@ -125,15 +125,15 @@ header {
 }
 
 /* Estilo para el footer. Copiar este sobre el de todos */
-footer {
+#footer {
+    position: relative;
     align-items: center;
     background-color: #2C4C5B;
     color: #CFCDCA;
     text-align: center;
     padding: 5px;
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    
 }
 
 /*

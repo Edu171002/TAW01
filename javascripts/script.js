@@ -9,6 +9,23 @@ function closeSideNav() {
     document.getElementById("main").style.marginLeft= "0";
 }
 
+window.addEventListener("DOMContentLoaded", function() {
+    const footer = document.getElementById("footer");
+  
+    function adjustFooterPosition() {
+      const isContentFull = document.body.offsetHeight <= window.innerHeight;
+      if (isContentFull) {
+        footer.style.position = "fixed";
+        footer.style.bottom = "0";
+      } else {
+        footer.style.position = "relative";
+      }
+    }
+  
+    window.addEventListener("resize", adjustFooterPosition);
+    adjustFooterPosition();
+  });
+  
 
 /*
 *
@@ -63,3 +80,4 @@ function startSlideshow() {
 }
 
 startSlideshow();
+
