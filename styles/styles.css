@@ -7,6 +7,19 @@ body {
     color: #CFCDCA;
 }
 
+a:link {
+  color: #2C4C5B;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2C4C5B;
+  text-decoration: none;
+}
+a:active {
+  color: #2C4C5B;
+  text-decoration: none;
+}
 header {
     display: flex;
     justify-content: space-between;
