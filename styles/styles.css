@@ -6,19 +6,19 @@ body {
     background-color: #432B14;
     color: #CFCDCA;
 }
-
+/*Hypertext*/
 a:link {
   color: #2C4C5B;
   text-decoration: none;
 }
 
 a:visited {
-  color: #2C4C5B;
+  color: #65849C;
   text-decoration: none;
 }
 a:active {
   color: #2C4C5B;
-  text-decoration: none;
+  text-decoration: underline;
 }
 header {
     display: flex;
