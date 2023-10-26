@@ -36,7 +36,7 @@ header {
     top: 0;
     left: 0;
     height: 100%;
-    background-color: #432B14;
+    background-color: #B87C48;
     overflow-x: hidden;
     transition: 0.5s; /*Transición desplegable*/
     padding-top: 60px;
@@ -58,7 +58,7 @@ header {
 
 .side-nav a:hover {
     color: #CFCDCA;
-    background-color: #6C7176;
+    background-color: #432B14;
 }
 
 .side-nav .close-btn {
@@ -99,11 +99,11 @@ header {
 .gallery{
     display: flex;
     flex-direction: column;
+    border-radius: 5px;
     margin: 3rem ;
     align-items: center;
     position: relative;
     width: fit-content;
-    background-color: #CFCDCA;
 }
 
 .gallery a{
@@ -113,7 +113,7 @@ header {
 .img{
     display: none;
     width: auto;
-    grid-area: 1/1/1/1;
+    border-radius: 5px;
 }
 
 .cursor {
@@ -158,6 +158,7 @@ header {
 .product-img {
     width: 100%;
     max-width: 500px;
+    border-radius: 5px;
     height: auto;  
     object-fit: cover;
 }
@@ -166,7 +167,6 @@ header {
     content: "";
     display: table;
     clear: both;
-    grid-area: 2/1/2/1
 }
 
 .column {
@@ -181,6 +181,7 @@ header {
 .miniatura {
     width: 40%;
     max-width: 150px;
+    border-radius: 5px;
     height: auto;
     align-items: center;
 }
@@ -188,19 +189,17 @@ header {
 .product-details {
     width: 100%;
     padding-top: 10%;
-    flex: 1; /* Take up available space */
     margin-left: 1rem;
     text-align: left;
-    grid-area: 1/2/2/2;
 }
 
-
-
-.buyme-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 20px;
-}  
+.comprar {
+    background-color: #432B14;
+    color: #CFCDCA;
+    padding: 20px;
+    border-radius: 5px;
+    border: 0;
+}
 
 footer {
     align-items: center;
@@ -213,7 +212,4 @@ footer {
     bottom: 0;
 }
 
-.item0 {grid-area: 1/1/2/2}
-.item1 {grid-area: 3/1/4/2}
-.item2 {grid-area: 1/3/2/4}
 

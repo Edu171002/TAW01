@@ -39,10 +39,8 @@ header {
     width: 100px;
     height: auto;
 }
-/*navegacion por teclado*/
-.focusable:focus {
-  outline: 2px solid blue;
-}
+
+/* Add this to styles.css */
 
 /* Hide the side navigation by default */
 .side-nav {
@@ -198,8 +196,13 @@ header {
   text-align: justify;
   color: #CFCDCA;
   padding: 10px 40px 0px;
-  line-height: 1.5;
+  line-height: 2;
 }
+
+.aboutus-text h1{
+  text-align: center;
+}
+
 
 .aboutus-grid {
   display: grid;
