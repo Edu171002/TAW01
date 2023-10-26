@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nosotros>
+<persona>
+<Nombre>Ana Espeso</Nombre>
+<Edad>22</Edad>
+<Cantidad>Cantidad de cafe Consumido: Solo consume cafe Descfeinado porque la da sueño.</Cantidad>
+<funfact>Despues de este trabajo pasaran a llamarla Ana Esspreso</funfact>
+
+</persona>
+<persona>
+<Nombre>Ivan Herrero</Nombre>
+<Edad>21</Edad>
+<Cantidad>Cantidad de cafe Consumido: Dos tazas de cafe con leche</Cantidad>
+<funfact>Su forma preferida de consumir cafe es en vena.</funfact>
+
+</persona>
+<persona>
+<Nombre>Eduardo Martinez</Nombre>
+<Edad>21</Edad>
+<Cantidad>cantidad de cafe Consumido:Solo un vasito.</Cantidad>
+<funfact>Cuando pide cafe de avellana en la maquina, le escupe las monedas a la cara.</funfact>
+
+</persona>
+
+</Nosotros>

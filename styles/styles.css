@@ -20,6 +20,10 @@ a:active {
   color: #2C4C5B;
   text-decoration: underline;
 }
+a:hover {
+  color: #B87C48;
+  text-decoration: underline;
+}
 header {
     display: flex;
     justify-content: space-between;
