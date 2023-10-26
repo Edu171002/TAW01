@@ -40,8 +40,8 @@ header {
     height: auto;
 }
 /*navegacion por teclado*/
-a:focus-visible {
-  outline: 2px solid;
+.focusable:focus {
+  outline: 2px solid blue;
 }
 
 /* Hide the side navigation by default */

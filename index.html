@@ -2,14 +2,15 @@
 <html lang="es">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <title>Your Website</title>
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles\styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Sidebar navigation -->
-    <div class="side-nav">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
+    <div class="side-nav focusable">
+        <a href="javascript:void(0)" class="close-btn focusable" onclick="closeSideNav()">&times;</a>
         <a href="index.html">Inicio</a>
         <a href="#contact-form">Contacto</a>
         <a href="aboutus.html">Acerca de nosotros</a>
@@ -19,10 +20,10 @@
     
     <!-- Header with logo and burger menu -->
     <header>
-        <div class="logo">
+        <div class="logo focusable">
             <img src="imagenes\logo.png" alt="Logo">
         </div>
-        <div class="burger-menu" onclick="openSideNav()">
+        <div class="burger-menu focusable" onclick="openSideNav()">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
@@ -34,7 +35,7 @@
 
             <script src="script.js"></script>
             -->
-            <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
+            <a href="checkout.html"><i class="fa fa-shopping focusable" style="font-size:24px;color:whitesmoke"></i>
             </a>
         </div>
     </header>
@@ -56,8 +57,8 @@
             </div>
             
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <!-- &# significa símbolos. -->
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev focusable" onclick="plusSlides(-1)">&#10094;</a> <!-- &# significa símbolos. -->
+            <a class="next focusable" onclick="plusSlides(1)">&#10095;</a>
         </div>
         <br>
         
@@ -72,22 +73,22 @@
         <div class="product-grid">
             <div class="product-square">
                 <img class="product-img" src="./imagenes/jon-tyson-KRedbshBxEk-unsplash.jpg" alt="Product 1">
-                <a href="productos/cafePimo.html"><h4  class="product-name">Primo Passo Bag</h4></a>
+                <a href="productos/cafePimo.html"><h4  class="product-name focusable">Primo Passo Bag</h4></a>
                 <p class="product-description">Cafe en grano italiano de muy buena calidad y seleccionado a mano.</p>
             </div>
             <div class="product-square">
                 <img class="product-img" src="./imagenes/battlecreek-coffee-roasters-_1wDmr4dtuk-unsplash.jpg" alt="Product 2">
-                <a href="productos/cafeBattlecreek.html"><h4  class="product-name">Battlecreek coffee roasters</h4></a>
+                <a href="productos/cafeBattlecreek.html"><h4  class="product-name focusable">Battlecreek coffee roasters</h4></a>
                 <p class="product-description">Cafe descafeinado de marca Indie.</p>
             </div>
             <div class="product-square">
                 <img class="product-img" src="./imagenes/marina-zaharkina-HUvmJiOrOKc-unsplash.jpg" alt="Product 2">
-                <a href="./productos/cafeRpahona.html"><h4  class="product-name">rpahona Beans Bag</h4></a>
+                <a href="./productos/cafeRpahona.html"><h4  class="product-name focusable">rpahona Beans Bag</h4></a>
                 <p class="product-description">Cafe descafeinado vegano y sin azucar.</p>
             </div>
             <div class="product-square">
                 <img class="product-img" src="./imagenes/lex-sirikiat-QouiCn7u6kw-unsplash.jpg" alt="Product 2">
-                <a href="./productos/cafeLittleNap.html"><h4 class="product-name">Little Nap Coffee Beans</h4></a>
+                <a href="./productos/cafeLittleNap.html"><h4 class="product-name focusable">Little Nap Coffee Beans</h4></a>
                 <p class="product-description">Granos de cafe brasileño.</p>
             </div>
             <div class="product-square">
@@ -97,7 +98,7 @@
             </div>
             <div class="product-square" >
                 <img class="product-img" src="imagenes/kyle-nieber-LtzZy-sTOBI-unsplash.jpg" alt="Product 2">
-                <a href="productos/cafeGoodFolks.html"><h4 class="product-name">Good Folks Coffee</h4></a>
+                <a href="productos/cafeGoodFolks.html"><h4 class="product-name focusable">Good Folks Coffee</h4></a>
                 <p class="product-description">Granos de cafe descafeinado con toque a canela.</p>
             </div>
             <!-- Add more products as needed -->
@@ -106,10 +107,10 @@
 
         <!-- Formulary -->
         <a name="contact-form"></a>
-        <form class="contact-form" >
+        <form class="contact-form focusable" >
             <h2>Contact Us</h2>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
+            <input type="text " placeholder="Name">
+            <input type="email " placeholder="Email">
             <textarea placeholder="Message"></textarea>
             <button type="submit">Submit</button>
         </form>
