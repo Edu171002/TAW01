@@ -39,8 +39,10 @@ header {
     width: 100px;
     height: auto;
 }
-
-/* Add this to styles.css */
+/*navegacion por teclado*/
+a:focus-visible {
+  outline: 2px solid;
+}
 
 /* Hide the side navigation by default */
 .side-nav {
