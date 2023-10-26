@@ -9,7 +9,7 @@ body {
 /*Hypertext*/
 a:link {
   color: #2C4C5B;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:visited {
