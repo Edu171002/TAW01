@@ -15,7 +15,7 @@ echo "</tr>";
 for($i=0;$i<$num;$i++){
     $row=mysqli_fetch_array($resultado);
     echo "<tr>";
-    echo "<td>" . $row['id_productos'] . "</td>";
+    echo "<td>" . $row['id_producto'] . "</td>";
     echo "<td>" . $row['nombre'] . "</td>";
     echo "<td>" . $row['descripcion'] . "</td>";
     echo "<td>" . $row['precio'] . "</td>";

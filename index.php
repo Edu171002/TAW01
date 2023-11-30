@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php //poner donde queramos
+session_start();
+// cambiar por el texto echo var_dump($_SESSION);
+?>
 <html lang="es">
 <head>
     <meta charset="utf-8">
@@ -75,40 +78,23 @@
 
         <!-- Matrix of products (3x2) -->
         <div class="product-grid">
-            <div class="product-square">
-                <img class="product-img" src="imagenes\Primo-Passo-Bags.jpg" alt="Bolsas de cafe Primo Passo">
-                <a href="productos/cafePimo.html"><h4  class="product-name focusable">Primo Passo Bag</h4></a>
-                <p class="product-description">Cafe en grano italiano de muy buena calidad y seleccionado a mano.</p>
-            </div>
-            <div class="product-square">
-                <img class="product-img" src="imagenes\battlecreek-coffee-roasters-Bag.jpg" alt="Bolsa de cafe Battlecreek">
-                <a href="productos/cafeBattlecreek.html"><h4  class="product-name focusable">Battlecreek coffee roasters</h4></a>
-                <p class="product-description">Cafe descafeinado de marca Indie.</p>
-            </div>
-            <div class="product-square">
-                <img class="product-img" src="imagenes\Rpahona-Bean-Bag.jpg" alt="Bolsa de cafe Rpahona">
-                <a href="./productos/cafeRpahona.html"><h4  class="product-name focusable">rpahona Beans Bag</h4></a>
-                <p class="product-description">Cafe descafeinado vegano y sin azucar.</p>
-            </div>
-            <div class="product-square">
-                <img class="product-img" src="imagenes\Little-Nap-Bag.jpg" alt="Bolsa de cafe Little Nap">
-                <a href="./productos/cafeLittleNap.html"><h4 class="product-name focusable">Little Nap Coffee Beans</h4></a>
-                <p class="product-description">Granos de cafe brasileño.</p>
-            </div>
-            <div class="product-square">
-                <img class="product-img" src="imagenes\Wood-Burl-Coffee-Bags.jpg" alt="Bolsas de cafe Wood Burl">
-                <a href="./productos/cafeWoodBurl.html"><h4 class="product-name">Wood Burl Coffee</h4></a>
-                <p class="product-description">Granos de cafe seleccionados a mano.</p>
-            </div>
-            <div class="product-square" >
-                <img class="product-img" src="imagenes\Good-Folks-Coffee-Bags.jpg" alt="Bolsas de cafe Good Folks">
-                <a href="productos/cafeGoodFolks.html"><h4 class="product-name focusable">Good Folks Coffee</h4></a>
-                <p class="product-description">Granos de cafe descafeinado con toque a canela.</p>
-            </div>
-            <!-- Add more products as needed -->
+            <?php
+                include('conexBD.php');
+                $query="select * from productos";
+                $resultado=mysqli_query($db,$query);
+                $num=mysqli_num_rows($resultado);
+
+                for($i=0;$i<$num;$i++){
+                    $row=mysqli_fetch_array($resultado);
+                    $array_imagen=explode('@',$row['imagen']);
+                    echo '<div class="product-square">';
+                        echo '<img class="product-img" src="'.$array_imagen[0].'" alt="'. $row['nombre'] .'">';
+                        echo '<a href="producto.php?id_producto='. $row['id_producto'] .'"><h4  class="product-name focusable">'.$row['nombre'].'</h4></a>';
+                        echo '<p class="product-description">'.$row['descripcion'].'</p>';        
+                    echo '</div>';
+                }
+            ?>
         </div>
-
-
         <!-- Formulary -->
         <a name="contact-form"></a>
         <form class="contact-form focusable" >

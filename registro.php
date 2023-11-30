@@ -1,4 +1,6 @@
-<?php
+<?php 
+session_start();
+
 @ $nombre = $_POST['nombre'];
 @ $apellidos = $_POST['apellidos'];
 @ $email = $_POST['email'];
@@ -35,14 +37,24 @@ $fecha_nac=addslashes($fecha_nac);
 
 
 include("conexBD.php");
-
+$query1="select * from Usuarios where email ='".$email."'";
+$resultado1=mysqli_query($db,$query1);
+$num=mysqli_num_rows($resultado1);
+if($num>0)
+echo "<script>alert('Ese email ya esta en uso.');history.back();</script>";
+else{
 $query="insert into Usuarios values ('".$email."','".$password."','".$nombre."','".$apellidos."','".$telefono."','".$direccion."','".$ciudad."','".$fecha_nac."',2)";
 echo "<br>".$query."<br>";
 $resultado=mysqli_query($db,$query);
-if($resultado)
-    echo "OK";
+if($resultado){
+$_SESSION['email']=$email;
+$_SESSION['privilegio']=2;
+header ("Location: index.php");
+     }
 else   
-    echo "NO";
-
+echo "<script>alert('No se ha podido hacer el registro.');history.back();</script>";
+    }
 mysqli_close($db);
+
+
 ?>
