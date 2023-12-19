@@ -6,33 +6,31 @@ session_start();
 $db = mysqli_connect('localhost', 'root', 'mysql', 'cafe');
  
 $errors = [];
-
 // Si se ha enviado el formulario
-if (isset($_POST['login_button'])) {
+if (@isset($_POST['login_button'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
-  $pass = mysqli_real_escape_string($db, $_POST['pass']);
+  $pass = mysqli_real_escape_string($db, $_POST['password']);
  
   // Comprobar si el nombre de usuario es válido
-  $query = "SELECT * FROM usuarios WHERE email='$email'";
-  $results = mysqli_query($db, $query);
+  $query = "SELECT * FROM usuarios WHERE email='$email' and pass='$pass'";
+  $resultado = mysqli_query($db, $query);
  
-  if (mysqli_num_rows($results) == 1) {
+  if (mysqli_num_rows($resultado) == 1) {
     // Nombre de usuario válido, verificar contraseña
-    $row = mysqli_fetch_assoc($results);
-    if (password_verify($pass, $row['pass'])) {
+    
+      $row=mysqli_fetch_array($resultado);
       // Inicio de sesión válido
       $_SESSION['email']=$email;
-      $_SESSION['privilegio']=2;
-      header('location: index.php');
+      $_SESSION['privilegio']=$row['privilegio'];
+      header ("Location: index.php");
     } else {
-      // Contraseña inválida
-      $errors[] = "Nombre de usuario/contraseña inválidos";
-    }
-  } else {
     // Nombre de usuario inválido
-    $errors[] = "Nombre de usuario/contraseña inválidos";
+    echo "<script>alert('Nombre de usuario/contraseña inválidos');history.back();</script>";
   }
 }
+
+  mysqli_close($db);
+
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +43,7 @@ if (isset($_POST['login_button'])) {
     <div class="d-flex min-vh-100">
       <div class="row d-flex flex-grow-1 justify-content-center align-items-center">
         <div class="col-md-4 form login-form">
-        <form action="index.php" method="POST" autocomplete="off">
+        <form action="login.php" method="POST" autocomplete="off">
             <h2 class="text-center">Inicio de sesión</h2>
               
               <?php

@@ -1,6 +1,7 @@
 <?php //poner donde queramos
 session_start();
-// cambiar por el texto echo var_dump($_SESSION);
+
+var_dump($_SESSION);
 ?>
 <html lang="es">
 <head>
@@ -82,6 +83,7 @@ session_start();
                 include('conexBD.php');
                 $query="select * from productos";
                 $resultado=mysqli_query($db,$query);
+
                 $num=mysqli_num_rows($resultado);
 
                 for($i=0;$i<$num;$i++){
