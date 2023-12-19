@@ -1,8 +1,12 @@
+<link rel="stylesheet" type="text/css" href="styles\styles.css">
+
 <form action="" method="POST">
 Palabras clave
 <input type="text" id="keywords" name="keywords" size="30" maxlength="30">
 <input type="submit" name="search" id="search" value="Buscar">
 </form>
+
+<a href="busqueda_avanzada.php">Busueda avanzada</a>
 <?php
 //Si se ha pulsado el botón de buscar
 if (isset($_POST['search'])) {
@@ -10,7 +14,7 @@ if (isset($_POST['search'])) {
     $keywords = $_POST['keywords'];
 
     //Conectamos con la base de datos en la que vamos a buscar
-    $db = mysqli_connect('localhost', 'root', 'mysql', 'cafe');
+    include('conexBD.php');
     
 
     $query = "SELECT id_producto, nombre, descripcion, precio, imagen 

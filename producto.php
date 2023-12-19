@@ -1,7 +1,26 @@
-<?php //poner donde queramos
-session_start();
-// cambiar por el texto echo var_dump($_SESSION);
-?>
+<?php 
+	session_start(); 
+	require("conexBD.php"); 
+	if(isset($_GET['page'])){ 
+		 
+		$pages=array("products", "cart"); 
+		 
+		if(in_array($_GET['page'], $pages)) { 
+			 
+			$_page=$_GET['page']; 
+			 
+		}else{ 
+			 
+			$_page="products"; 
+			 
+		} 
+		 
+	}else{ 
+		 
+		$_page="products"; 
+		 
+	} 
+ 
 <html lang="es">
 <head>
     <meta charset="utf-8">
@@ -94,8 +113,39 @@ session_start();
                 echo '<h2>'.$row['nombre'].'</h2>';
                 echo '<p>'.$row['descripcion'].'</p>';
                 echo '<p>Precio:'.$row['precio'].'</p>';
-                echo '<button class="comprar" style="background-color: #B87C48;">Comprar</button>';
-                echo '<button class="comprar">Añadir a la cesta</button>';
+                
+                echo '<button action="get" class="comprar">Añadir a la cesta</button>';
+                if(isset($_GET['action']) && $_GET['action']=="add"){ 
+		 
+                    $id=intval($_GET['id_producto']); 
+                     
+                    if(isset($_SESSION['cart'][$id])){ 
+                         
+                        $_SESSION['cart'][$id]['quantity']++; 
+                         
+                    }else{ 
+                         
+                        $sql_s="SELECT * FROM products 
+            WHERE id_product={$id}"; 
+                        $query_s=mysql_query($sql_s); 
+                        if(mysql_num_rows($query_s)!=0){ 
+                            $row_s=mysql_fetch_array($query_s); 
+                             
+                            $_SESSION['cart'][$row_s['id_product']]=array( 
+                                    "quantity" => 1, 
+                                    "price" => $row_s['price'] 
+                                ); 
+                             
+                             
+                        }else{ 
+                             
+                            $message="This product id it's invalid!"; 
+                             
+                        } 
+                         
+                    } 
+                     
+                } 
             echo '</div> ';
         echo '</div>';
     echo '</div>';

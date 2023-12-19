@@ -1,9 +1,11 @@
+<link rel="stylesheet" type="text/css" href="styles\styles.css">
+
 <?php
 // Iniciar sesión
 session_start();
  
 // Conexión a la base de datos
-$db = mysqli_connect('localhost', 'root', 'mysql', 'cafe');
+include('conexBD.php');
  
 $errors = [];
 // Si se ha enviado el formulario
@@ -39,7 +41,7 @@ if (@isset($_POST['login_button'])) {
   <title>Inicio de sesión</title>
 </head>
 <body>
-  <div class="container">
+  <div class="form">
     <div class="d-flex min-vh-100">
       <div class="row d-flex flex-grow-1 justify-content-center align-items-center">
         <div class="col-md-4 form login-form">
@@ -56,18 +58,22 @@ if (@isset($_POST['login_button'])) {
               }
               ?>
               
-              <div class="form-group mb-3">
-                  <input type="text" name="email" class="form-control" placeholder="Correo electrónico" required>
+              <div class="form">
+                  <input type="text" name="email" class="form" placeholder="Correo electrónico" required>
               </div>
-              <div class="form-group mb-3">
-                  <input type="password" name="password" class="form-control" placeholder="Contraseña" required>
+              <div class="form">
+                  <input type="password" name="password" class="form" placeholder="Contraseña" required>
               </div>
-              <div class="form-group mb-3">
-                  <input type="submit" name="login_button" class="form-control btn btn-primary" value="Acceder">
+              <div class="form">
+                  <input type="submit" name="login_button" class="form boton" value="Acceder">
               </div>
           </form>
         </div>
       </div>
+      <a href="form_registro.html">Registro</a>
+      <a href="logout.php">Logout</a>
+
+
     </div>
   </div>  
 </body>

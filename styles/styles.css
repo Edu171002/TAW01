@@ -85,6 +85,44 @@ header {
     font-size: 36px;
     margin-left: 50px;
 }
+.nav {
+  width: 0;
+  position: fixed;
+  top: 0;
+  right:0;
+  height: 100%;
+  background-color: #CFCDCA;
+  overflow-x: hidden;
+  transition: 0.5s; /*Transición desplegable*/
+  padding-top: 60px;
+  z-index: 1;
+}
+
+.nav.open {
+  width: 50%;
+}
+
+.nav a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #2C4C5B;
+  display: block;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #CFCDCA;
+  background-color: #65849C;
+}
+
+.nav .close-btn {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
 
 /* Style the content pushed to the right when the menu is open */
 .content {
@@ -92,6 +130,20 @@ header {
 }
 
 /* Burger menu icon styles */
+.burger-cart {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  order: -1; 
+}
+.burger-cart   {
+  background-color: #CFCDCA;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+  border-radius: 3px;
+}
 .burger-menu {
     cursor: pointer;
     display: flex;
@@ -190,16 +242,16 @@ header {
 }
 
 /* Style for the contact form */
-.contact-form {
+.form {
     text-align: center;
     padding: 20px;
 }
 
-.contact-form h2 {
+.form h2 {
     margin-bottom: 1 0px;
 }
 
-.contact-form input, .contact-form textarea {
+.form input, .form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -208,7 +260,7 @@ header {
     background-color: #CFCDCA;
 }
 
-.contact-form button {
+.form button {
     background-color: #2C4C5B;
     color: #CFCDCA;
     padding: 10px 20px;

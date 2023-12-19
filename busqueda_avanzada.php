@@ -1,3 +1,5 @@
+<link rel="stylesheet" type="text/css" href="styles\styles.css">
+
 <form action="" method="post">
     <label for="nombre">Nombre:</label>
     <input type="text" id="keyword" name="nombre">
@@ -39,8 +41,7 @@ if (isset($_POST['search'])) {
 
     //Conectamos con la base de datos en la que vamos a buscar
     //Poner esta siguiente linea con una @ delante y un if después comprobando y dando mensaje, en un fichero separado, del que haceis un include aquí y donde sea
-    $db = mysqli_connect('localhost', 'root', 'mysql', 'cafe');
-    
+    include('conexBD.php');
 
     $query = "SELECT * FROM productos
                 WHERE nombre LIKE '%" . $nombre . "%'

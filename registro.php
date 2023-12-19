@@ -1,6 +1,38 @@
 <?php 
 session_start();
+?>
+<form action="registro.php" method="post">
+          
+                  <div class="row">
+                    <div class="col-50">
+                      <h3>Dirección de facturación</h3>
+                      <label for="nombre"><i class="fa fa-user"></i> Nombre</label>
+                      <input type="text" id="fname" name="nombre" placeholder="Estudiante">
 
+                      <label for="apellidos"><i class="fa fa-user"></i>Apellidos</label>
+                      <input type="text" id="fname" name="apellidos" placeholder="Estudiante">
+
+                      <label for="email"><i class="fa fa-envelope"></i>Email</label>
+                      <input type="text" id="email" name="email" placeholder="estudiante@example.com">
+
+                      <label for="telefono"><i class="fa fa-envelope"></i>telefono</label>
+                      <input type="text" id="telefono" name="telefono" placeholder="1234567">
+
+                      <label for="direccion"><i class="fa fa-envelope"></i>Direccion</label>
+                      <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1">
+
+                      <label for="ciudad"><i class="fa fa-envelope"></i>ciudad</label>
+                      <input type="text" id="ciudad" name="ciudad" placeholder="ciudad">
+
+                      <label for="password"><i class="fa fa-address-card-o"></i> Contraseña</label>
+                      <input type="password" id="password" name="password" placeholder="Contraseña">
+                      
+                      <label for="fecha_nac"><i class="fa fa-institution"></i>Fecha de nacimiento</label>
+                      <input type="text" id="fecha_nac" name="fecha_nac" placeholder="2000-12-12">
+          
+                  <input type="submit" value="Enviar" class="btn">
+                </form>
+<?php
 @ $nombre = $_POST['nombre'];
 @ $apellidos = $_POST['apellidos'];
 @ $email = $_POST['email'];

@@ -18,35 +18,12 @@ var_dump($_SESSION);
     <meta name="robots" content="index, follow">
 </head>
 <body>
-    <!-- Sidebar navigation -->
-    <div class="side-nav focusable">
-        <a href="javascript:void(0)" class="close-btn focusable" onclick="closeSideNav()">&times;</a>
-        <a href="index.html">Inicio</a>
-        <a href="#contact-form">Contacto</a>
-        <a href="aboutus.html">Acerca de nosotros</a>
-        <a href="Cafeespecialidad.html">Cafe de especialidad</a>
-        <a href="Cafedescafeinado.html">Cafe descafeinado</a>
-    </div>
-    
-    <!-- Header with logo and burger menu -->
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="imagenes/logo.png" alt="Logo"></a>
-        </div>
-        <div class="burger-menu" onclick="openSideNav()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div >
-            <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
-            </a>
-        </div>
-    </header>
-
+     <?php 
+    include 'header.php';
+    ?> 
     <div id="main">
         <!-- Gallery of rotating images -->
-     <!-- Slideshow container -->
+        <!-- Slideshow container -->
         <div class="slideshow-container">
 
             <!-- Full-width images with number and caption text -->
@@ -97,20 +74,11 @@ var_dump($_SESSION);
                 }
             ?>
         </div>
-        <!-- Formulary -->
-        <a name="contact-form"></a>
-        <form class="contact-form focusable" >
-            <h2>Contact Us</h2>
-            <input type="text " placeholder="Name">
-            <input type="email " placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+        
 
-    <!-- Footer -->
-    <footer id="footer"><p>&copy; 2023 HTTP://COFFEE - anamaria.espeso@estudiantes.uva.es - ivan.herrero.alonso@estudiantes.uva.es - eduardo.martinez.juarez@estudiantes.uva.es</p>
-    </footer>
+    <?php 
+    include 'footer.php';
+    ?>
 
     <script src="javascripts/script.js"></script>
 </body>

@@ -8,6 +8,15 @@ function closeSideNav() {
   document.querySelector('.side-nav').style.width = '0';
   document.getElementById("main").style.marginLeft= "0";
 }
+function openNav() {
+  document.querySelector('.nav').style.width = '250px';
+  document.getElementById("main").style.marginRight = "250px";
+}
+
+function closeNav() {
+  document.querySelector('.nav').style.width = '0';
+  document.getElementById("main").style.marginRight= "0";
+}
 
 window.addEventListener("DOMContentLoaded", function() {
   const footer = document.getElementById("footer");
