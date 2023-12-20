@@ -1,37 +1,64 @@
+
 <html>
-  <link rel="stylesheet" type="text/css" href="styles\styles.css">
+    <html lang="es">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Formulario de Registro</title>
+      <!-- Incluye jQuery y jQuery UI -->
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-  <body>
-<form action="registro.php" method="post">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      
+       <link rel="stylesheet" type="text/css" href="styles\styles.css">
+      
+    </head>
+    <body>
+    
+    <form action="registro.php" method="post">
+      <div class="row">
+        <div class="col-50">
+          <h3>Formulario de registro</h3>
+          <label for="nombre"><i class="fa fa-user"></i> Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Estudiante">
+    
+          <label for="apellidos"><i class="fa fa-user"></i> Apellidos</label>
+          <input type="text" id="apellidos" name="apellidos" placeholder="Estudiante">
+    
+          <label for="email"><i class="fa fa-envelope"></i> Email</label>
+          <input type="text" id="email" name="email" placeholder="estudiante@example.com">
+    
+          <label for="telefono"><i class="fa fa-envelope"></i> Teléfono</label>
+          <input type="text" id="telefono" name="telefono" placeholder="1234567">
+    
+          <label for="direccion"><i class="fa fa-envelope"></i> Dirección</label>
+          <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1">
+    
+          <label for="ciudad"><i class="fa fa-envelope"></i> Ciudad</label>
+          <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+    
+          <label for="password"><i class="fa fa-address-card-o"></i> Contraseña</label>
+          <input type="password" id="password" name="password" placeholder="Contraseña">
           
-                  <div class="row">
-                    <div class="col-50">
-                      <h3>Dirección de facturación</h3>
-                      <label for="nombre"><i class="fa fa-user"></i> Nombre</label>
-                      <input type="text" id="fname" name="nombre" placeholder="Estudiante">
-
-                      <label for="apellidos"><i class="fa fa-user"></i>Apellidos</label>
-                      <input type="text" id="fname" name="apellidos" placeholder="Estudiante">
-
-                      <label for="email"><i class="fa fa-envelope"></i>Email</label>
-                      <input type="text" id="email" name="email" placeholder="estudiante@example.com">
-
-                      <label for="telefono"><i class="fa fa-envelope"></i>telefono</label>
-                      <input type="text" id="telefono" name="telefono" placeholder="1234567">
-
-                      <label for="direccion"><i class="fa fa-envelope"></i>Direccion</label>
-                      <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1">
-
-                      <label for="ciudad"><i class="fa fa-envelope"></i>ciudad</label>
-                      <input type="text" id="ciudad" name="ciudad" placeholder="ciudad">
-
-                      <label for="password"><i class="fa fa-address-card-o"></i> Contraseña</label>
-                      <input type="password" id="password" name="password" placeholder="Contraseña">
-                      
-                      <label for="fecha_nac"><i class="fa fa-institution"></i>Fecha de nacimiento</label>
-                      <input type="text" id="fecha_nac" name="fecha_nac" placeholder="2000-12-12">
-          
-                  <input type="submit" value="Enviar" class="btn">
-                </form>
-              </body>
-            </html>
+          <label for="fecha_nac"><i class="fa fa-institution"></i> Fecha de nacimiento</label>
+          <input type="text" id="fecha_nac" name="fecha_nac" placeholder="Selecciona una fecha">
+    
+          <input type="submit" value="Enviar" class="btn">
+        </div>
+      </div>
+    </form>
+    
+    <script>
+      // Inicializa el DatePicker para el campo de fecha
+      $(document).ready(function(){
+        $('#fecha_nac').datepicker({
+          dateFormat: 'yy-mm-dd',
+          changeMonth: true,
+          changeYear: true
+        });
+      });
+    </script>
+    
+    </body>
+    </html>

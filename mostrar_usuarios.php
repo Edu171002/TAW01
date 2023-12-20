@@ -22,7 +22,7 @@ for($i=0;$i<$num;$i++){
     echo "<td>" . $row['email'] . "</td>";
     echo "<td>" . $row['telefono'] . "</td>";
     echo "<td> <a href='modificar_usuario.php?email=" . $row['email'] . "'>Modificar </a></td>";
-    echo "<td> <a href='eliminar_usuario.php?email=" . $row['email'] . "'>Eliminar </a></td>";
+    echo "<td> <a href='borrar_usuarios.php?email=" . $row['email'] . "'>Eliminar </a></td>";
     echo "</tr>";
 
 }
