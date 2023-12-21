@@ -23,7 +23,7 @@
             <div class="bar"></div>
         </div>
         <div >
-            <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
+            <a href="checkout.php"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
             </a>
         </div>
         <div >

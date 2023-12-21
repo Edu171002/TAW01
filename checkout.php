@@ -1,61 +1,62 @@
-<?php 
-if(isset($_POST['submit'])){ 
- 
- foreach($_POST['cantidad'] as $key => $val) { 
-   if($val==0) { 
-     unset($_SESSION['id_pedido'][$key]); 
-   }else{ 
-     $_SESSION['id_pedido'][$key]['cantidad']=$val; 
-   } 
- } 
-  
- }
- ?>
-<h1>View cart</h1> 
-<a href="index.php">Go back to products page</a> 
-<form method="post" action="index.php"> 
-     
-	<table> 
-	     
-		<tr> 
-		    <th>Name</th> 
-		    <th>Quantity</th> 
-		    <th>Price</th> 
-		    <th>Items Price</th> 
-		</tr> 
-		 
-		<?php 
-		 
-			$sql="SELECT * FROM products WHERE id_product IN ("; 
-					 
-					foreach($_SESSION['id_pedido'] as $id => $value) { 
-						$sql.=$id.","; 
-					} 
-					 
-					$sql=substr($sql, 0, -1).") ORDER BY name ASC"; 
-					$query=mysql_query($sql); 
-					$totalprice=0; 
-					while($row=mysql_fetch_array($query)){ 
-						$subtotal=$_SESSION['id_pedido'][$row['id_producto']]['cantidad']*$row['precio']; 
-						$totalprice+=$subtotal; 
-					?> 
-						<tr> 
-						    <td><?php echo $row['nombre'] ?></td> 
-						    <td><input type="text" name="cantidad[<?php echo $row['id_producto'] ?>]" size="5" value="<?php echo $_SESSION['id_pedido'][$row['id_producto']]['cantidad'] ?>" /></td> 
-						    <td><?php echo $row['precio'] ?>$</td> 
-						    <td><?php echo $_SESSION['id_pedido'][$row['id_producto']]['cantidad']*$row['precio'] ?>$</td> 
-						</tr> 
-					<?php 
-						 
-					} 
-		?> 
-					<tr> 
-					    <td colspan="4">Total Price: <?php echo $totalprice ?></td> 
-					</tr> 
-		 
-	</table> 
-	<br /> 
-	<button type="submit" name="submit">Update Cart</button> 
-</form> 
-<br /> 
-<p>To remove an item, set it's quantity to 0. </p>
+<?php
+include 'La-carta.php';
+$pedido = new pedido;
+include 'header.php';
+
+?>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+        function updateCartItem(obj, id) {
+            $.get("cartAction.php", {
+                action: "updateCartItem",
+                id: id,
+                qty: obj.value
+            }, function(data) {
+                if (data == 'ok') {
+                    location.reload();
+                } else {
+                    alert('Cart update failed, please try again.');
+                }
+            });
+        }
+    </script>
+
+<div class="panel-body">
+
+
+<h1>Carrito de compras</h1>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Producto</th>
+			<th>Precio</th>
+			<th>Cantidad</th>
+			<th>Sub total</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php
+		if ($cart->total_items() > 0) {
+			//get cart items from session
+			$cartItems = $cart->contents();
+			foreach ($cartItems as $item) {
+		?>
+				<tr>
+					<td><?php echo $item["name"]; ?></td>
+					<td><?php echo '$' . $item["price"] . ' COP'; ?></td>
+					<td><input type="number" class="form-control text-center" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')"></td>
+					<td><?php echo '$' . $item["subtotal"] . ' COP'; ?></td>
+					<td>
+						<a href="AccionCarta.php?action=removeCartItem&id=<?php echo $item["rowid"]; ?>" class="btn btn-danger" onclick="return confirm('Confirma eliminar?')"><i class="glyphicon glyphicon-trash"></i></a>
+					</td>
+				</tr>
+			<?php }
+		} else { ?>
+			<tr>
+				<td colspan="5">
+					<p>No has solicitado ningún producto.....</p>
+				</td>
+			<?php } ?>
+			</tbody>

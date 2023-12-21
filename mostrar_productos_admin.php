@@ -22,8 +22,8 @@ for($i=0;$i<$num;$i++){
     echo "<td>" . $row['descripcion'] . "</td>";
     echo "<td>" . $row['precio'] . "</td>";
     echo "<td>" . $row['categoria'] . "</td>";
-    echo "<td> <a href='modificar_producto.php?email=" . $row['id_producto'] . "'>Modificar </a></td>";
-    echo "<td> <a href='eliminar_producto.php?email=" . $row['id_producto'] . "'>Eliminar </a></td>";
+    echo "<td> <a href='modificar_producto.php?id_producto=" . $row['id_producto'] . "'>Modificar </a></td>";
+    echo "<td> <a href='borrar_producto.php?id_producto=" . $row['id_producto'] . "'>Eliminar </a></td>";
     echo "</tr>";
 
 }
