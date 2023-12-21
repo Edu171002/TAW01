@@ -20,7 +20,8 @@
 		$_page="products"; 
 		 
 	} 
- 
+    include 'header.php';
+ ?>
 <html lang="es">
 <head>
     <meta charset="utf-8">
@@ -30,42 +31,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
    
-
-    <script src="javascripts/script.js" defer></script>
-</head>
-<body>
-    <div class="wrapper">
-    <!-- Sidebar navigation -->
-    <div class="side-nav">
-        <a href="javascript:void(0)" class="close-btn" onclick="closeSideNav()">&times;</a>
-        <a href="index.html">Inicio</a>
-        <a href="index.html#contact-form">Contacto</a>
-        <a href="aboutus.html">Acerca de nosotros</a>
-        <a href="Cafeespecialidad.html">Cafe de especialidad</a>
-        <a href="Cafedescafeinado.html">Cafe descafeinado</a>
-    </div>
-
-    <!-- Header with logo and burger menu -->
-    <header>
-        <div class="logo">
-            <a href="index.html"><img src="./imagenes/logo.png" alt="Logo"></a>
-        </div>
-        <div class="burger-menu" onclick="openSideNav()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <div >
-            <!--Esto hay que probarlo en un servidor
-            <a id="cargarDatos"><i class="fa fa-shopping-cart"        style="font-size:24px;color:whitesmoke"></i></a>
-            <div id="resultado"></div>
-
-            <script src="script.js"></script>
-            -->
-            <a href="../checkout.html"><i class="fa fa-shopping-cart" style="font-size:24px;color:whitesmoke"></i>
-            </a>
-        </div>
-    </header>
 
     <?php
         include('conexBD.php');
@@ -114,46 +79,16 @@
                 echo '<p>'.$row['descripcion'].'</p>';
                 echo '<p>Precio:'.$row['precio'].'</p>';
                 
-                echo '<button action="get" class="comprar">Añadir a la cesta</button>';
-                if(isset($_GET['action']) && $_GET['action']=="add"){ 
-		 
-                    $id=intval($_GET['id_producto']); 
-                     
-                    if(isset($_SESSION['cart'][$id])){ 
-                         
-                        $_SESSION['cart'][$id]['quantity']++; 
-                         
-                    }else{ 
-                         
-                        $sql_s="SELECT * FROM products 
-            WHERE id_product={$id}"; 
-                        $query_s=mysql_query($sql_s); 
-                        if(mysql_num_rows($query_s)!=0){ 
-                            $row_s=mysql_fetch_array($query_s); 
-                             
-                            $_SESSION['cart'][$row_s['id_product']]=array( 
-                                    "quantity" => 1, 
-                                    "price" => $row_s['price'] 
-                                ); 
-                             
-                             
-                        }else{ 
-                             
-                            $message="This product id it's invalid!"; 
-                             
-                        } 
-                         
-                    } 
-                     
-                } 
+                echo '<button><a href="agregarAlCarrito.php?id_producto=' . $id_producto . '">Añadir a la cesta</a></button>';
+                
             echo '</div> ';
         echo '</div>';
     echo '</div>';
+
+    //include "footer.php";
  ?>
                 
-<footer id="footer">
-    <p>&copy; 2023 HTTP://COFFEE - anamaria.espeso@estudiantes.uva.es - ivan.herrero.alonso@estudiantes.uva.es - eduardo.martinez.juarez@estudiantes.uva.es</p>
-</footer>
+
 
 <script src="../javascripts/script.js"></script>
 </body>
