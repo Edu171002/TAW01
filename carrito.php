@@ -1,7 +1,6 @@
 <?php
 session_start();
 include('conexBD.php');
-var_dump($_SESSION);
 
 ?>
 <table>
@@ -34,6 +33,7 @@ foreach ($_SESSION['carrito'] as $id_producto=>$cantidad ) {
           <td><button onclick="window.location.href='borrarDelCarrito.php?id_producto=<?php echo $id_producto; ?>'">Quitar del carrito</button></td>
      </tr>
 <?php
+ $_SESSION['precio_total']=$total;
 }?>
   </tbody>
 </table>
