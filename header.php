@@ -39,10 +39,13 @@ if (session_status() == PHP_SESSION_NONE) {
             </a>
         </div>
          
-        <?php
-        
-    if ( $_SESSION['privilegio'] == "1") {
-        echo '<div><a href="admin_site.php"><i style="font-size:24px;color:whitesmoke"> Admin </i></a></div>';
+        <?php   //Probar con isset
+    if (strlen(var_export($_SESSION, true))>10) {   //Si el volcado de la sesión es una cadena más larga de 10 (se cumple si un usuario inicia sesión) se comprueba el privilegio
+        if ( $_SESSION['privilegio'] == "1") { // Es necesario para no mostrar un error al no existir el privilegio cuando no se ha hecho conexión con la base de datos
+            echo '<div><a href="admin_site.php"><i style="font-size:24px;color:whitesmoke"> Admin </i></a></div>';
+        }
     }
+     
+    
 ?>
     </header>

@@ -184,6 +184,88 @@ header {
     text-transform:uppercase;
   padding:1em 1.5em;
 }
+
+.form-container{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.login{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 350px;
+  background-color: #2C4C5B;
+  border-radius: 5px;
+}
+
+.large_form{
+  text-align: justify;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: fit-content;
+  background-color: #2C4C5B;
+  border-radius: 5px;
+}
+
+.large_form-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  align-items: center;
+  text-align: center;
+}
+
+.search{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  background-color: #2C4C5B;
+  border-radius: 5px;
+}
+
+.search-container{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.search input{
+  padding: 10px;
+  margin: 10px 0;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #CFCDCA;
+}
+
+.search .button{
+  background-color: #B87C48;
+}
+
+.advsearch-container{
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
 .button-container{
   display:inline-block;
   position:relative;
@@ -251,7 +333,7 @@ header {
     margin-bottom: 1 0px;
 }
 
-.form input, .form textarea {
+.form input, .form textarea, form select{
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -260,14 +342,16 @@ header {
     background-color: #CFCDCA;
 }
 
-.form button {
-    background-color: #2C4C5B;
+.form .button {
+    background-color: #B87C48;
     color: #CFCDCA;
+    /* width: fit-content; */
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+
 
 /* Style for the About Us textbox */
 .aboutus-text {

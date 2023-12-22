@@ -41,7 +41,10 @@ if (@isset($_POST['login_button'])) {
   <title>Inicio de sesión</title>
 </head>
 <body>
-  <div class="form">
+  <?php 
+    include 'header.php';
+    ?> 
+  <div class="form-container"> 
     <div class="d-flex min-vh-100">
       <div class="row d-flex flex-grow-1 justify-content-center align-items-center">
         <div class="col-md-4 form login-form">
@@ -58,23 +61,36 @@ if (@isset($_POST['login_button'])) {
               }
               ?>
               
-              <div class="form">
-                  <input type="text" name="email" class="form" placeholder="Correo electrónico" required>
+              <div class="login">
+                <div class="form">
+                    <input type="text" name="email" class="form" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form">
+                    <input type="password" name="password" class="form" placeholder="Contraseña" required>
+                </div>
+                <div class="form">
+                    <input type="submit" name="login_button" class="button" value="Acceder">
+                </div>
+                <div>
+                  <p>¿Aún no tienes una cuenta? <a href="form_registro.php" style="color: #B87C48">Regístrate</a> </p>
+                  
+                </div>
               </div>
-              <div class="form">
-                  <input type="password" name="password" class="form" placeholder="Contraseña" required>
-              </div>
-              <div class="form">
-                  <input type="submit" name="login_button" class="form boton" value="Acceder">
-              </div>
+
+              <br><a href="logout.php" style="color: #65849C">Cerrar sesión</a>
           </form>
         </div>
+        </div>
+        
+        
+
+
       </div>
-      <a href="form_registro.html">Registro</a>
-      <a href="logout.php">Logout</a>
+  </div>
+  <?php 
+    include 'footer.php';
+    ?>
 
-
-    </div>
-  </div>  
+    <script src="javascripts/script.js"></script>
 </body>
 </html>
