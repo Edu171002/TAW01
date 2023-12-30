@@ -4,7 +4,7 @@ include('conexBD.php');
 
 $total = 0;
 
-if(isset($_SESSION['carrito'])){  //Cuando se vacía el carro desde el propio carro se cumple incorrectamente, revisar
+if(isset($_SESSION['carrito'])){  //Cuando se vacía el carro desde el propio carro se cumple incorrectamente, revisar+
   ?>
   <table>
   <thead>
