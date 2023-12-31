@@ -111,26 +111,23 @@ if (@isset($_POST['login_button'])) {
         if (strlen($cafeina)>10)    //Si la cadena es más larga de 10 caracteres es porque se ha seleccionado "descafeinado"
         $query = "SELECT * FROM productos
                     WHERE nombre LIKE '%" .$nombre. "%'
-                    AND descripcion LIKE '%" .$descripcion. "%'
                     AND descripcion LIKE '%descafeinado%'";
 
         else
         $query = "SELECT * FROM productos
                     WHERE nombre LIKE '%" .$nombre. "%'
-                    AND descripcion LIKE '%" .$descripcion. "%'
                     AND descripcion NOT LIKE '%descafeinado%'";
 
-        var_dump($query);
-        var_dump(strlen($cafeina));
+        
         if($precioMax)
             $query .= " AND precio <= " . $precioMax;
         if($precioMin)
             $query .= " AND precio >= " . $precioMin;
-        // if($pesoMax)
-        //     $query .= " AND peso <= " . $pesoMax;
-        // if($pesoMin)
-        //     $query .= " AND peso >= " . $pesoMin;
-    //añadir una columna llamada peso
+        if($pesoMax)
+            $query .= " AND peso <= " . $pesoMax;
+        if($pesoMin)
+            $query .= " AND peso >= " . $pesoMin;
+    
             
         $query.= " ORDER BY nombre";
 

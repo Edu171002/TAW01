@@ -1,7 +1,7 @@
 <?php //poner donde queramos
 session_start();
 
-var_dump($_SESSION);
+
 ?>
 <html lang="es">
 <head>

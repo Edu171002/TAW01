@@ -30,7 +30,8 @@
     <link rel="stylesheet" type="text/css" href="styles/producto.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-   
+</head>
+<body>
 
     <?php
         include('conexBD.php');
@@ -47,23 +48,6 @@
                 echo '<div class="gallery" style="align-content: left;">';
                 
 
-                    echo '<div class="mySlides fade">';
-                    
-                        echo '<img class="product-img" src="'.$array_imagen[0].'" alt="'.$row['nombre'].'" style="width: 100%;">';
-                    echo '</div>';
-
-                    echo '<div class="mySlides fade">';
-                    
-                        echo '<img class="product-img" src="'.$array_imagen[1].'" alt="'.$row['nombre'].'" style="width: 100%;">';
-                    echo '</div>';
-
-                    echo '<a class="prev" onclick="plusSlides(-1)"> &#10094; </a>'; 
-                    echo '<a class="next" onclick="plusSlides(1)"> &#10095; </a>';
-            
-
-            
-       
-
                     echo '<div class="row">';
                 
                         echo '<img class="miniatura" src="'.$array_imagen[0].'" alt="'.$row['nombre'].'" onclick="currentSlide(1)">';
@@ -73,15 +57,13 @@
                 echo '</div>';
             echo '</div>';
             echo '<div class="product-details">';
-                echo '<div >';
-                echo '<br><br>';
+                
                 echo '<h2>'.$row['nombre'].'</h2>';
                 echo '<p>'.$row['descripcion'].'</p>';
                 echo '<p>Precio:'.$row['precio'].'</p>';
-                
                 echo '<button><a href="agregarAlCarrito.php?id_producto=' . $id_producto . '">Añadir a la cesta</a></button>';
                 
-            echo '</div> ';
+            
         echo '</div>';
     echo '</div>';
 
