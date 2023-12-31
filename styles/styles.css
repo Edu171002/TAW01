@@ -284,6 +284,12 @@ header {
   .button-container b:hover{
     background-color:#432B14;
   }
+
+.shoppingcart-table{
+  color: #CFCDCA;
+  padding: 20px;
+}
+
 /* Style for the product grid */
 .product-grid {
   display: grid;
