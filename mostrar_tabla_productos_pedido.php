@@ -7,7 +7,8 @@ $query="select * from pedidos";
 $resultado=mysqli_query($db,$query);
 $num=mysqli_num_rows($resultado);
 
-echo "Num:..." . $num;
+echo '<p><a href="admin_site.php">Volver</a></p>';
+echo "Nuúmero de pedidos: " . $num;
 
 echo "<table border='1'>";
 echo "<tr>";

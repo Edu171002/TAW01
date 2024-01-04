@@ -16,12 +16,10 @@
     </head>
     <body>
     
-    <?php 
-    include 'header.php'; //Al añadir aquí la cabecera aparecen iconos junto a los label del formulario
-    ?> 
-    <br><br> <br><br>
+    <p><a href="admin_site.php">Volver</a></p>
+    <br><br>
     <div class="form-container">
-      <form action="registro_admin.php" method="post">
+      <form action="#" method="post">
         <div class="row">
           <div class="col-50">
             <h3 style="text-align: center">Formulario de registro</h3>
@@ -29,11 +27,11 @@
                 <div class="large_form-grid">
                   <div class="form">
                     <label for="nombre"><i class=""></i> Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Estudiante">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
                   </div>
                   <div class="form">
                     <label for="apellidos"><i class=""></i> Apellidos</label>
-                    <input type="text" id="apellidos" name="apellidos" placeholder="Estudiante">
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
                   </div>
                   <div class="form">
                     <label for="email"><i class=""></i> Email</label>
@@ -65,13 +63,78 @@
                   </div>
                 </div>
                 <div class="form"> 
-                  <input type="submit" value="Enviar" class="button" >
+                  <input type="submit" value="Enviar" class="button" name="Enviar">
                 </div>
             </div>
           </div>
         </div>
       </form>
 </div>
+<?php
+@ $nombre = $_POST['nombre'];
+@ $apellidos = $_POST['apellidos'];
+@ $email = $_POST['email'];
+@ $telefono = $_POST['telefono'];
+@ $direccion = $_POST['direccion'];
+@ $ciudad = $_POST['ciudad'];
+@ $password = $_POST['password'];
+@ $fecha_nac = $_POST['fecha_nac'];
+@ $privilegio = $_POST['privilegio'];
+
+$nombre=trim($nombre);
+$apellidos=trim($apellidos);
+$email=trim($email);
+$telefono=trim($telefono);
+$direccion=trim($direccion);
+$ciudad=trim($ciudad);
+$password=trim($password);
+$fecha_nac=trim($fecha_nac);
+$privilegio=trim($privilegio);
+
+
+
+//prepro fecha...
+
+$nombre=addslashes($nombre);
+$apellidos=addslashes($apellidos);
+$email=addslashes($email);
+$telefono=addslashes($telefono);
+$direccion=addslashes($direccion);
+$ciudad=addslashes($ciudad);
+$password=addslashes($password);
+$fecha_nac=addslashes($fecha_nac);
+$privilegio=addslashes($privilegio);
+
+if(isset($_POST['Enviar'])){
+
+  include("conexBD.php");
+
+  if(!$email || !$nombre){
+    echo "<script>alert('faltan datos');history.back();</script>";
+    exit;
+  }
+
+  $query1="select * from Usuarios where email ='".$email."'";
+  $resultado1=mysqli_query($db,$query1);
+  $num=mysqli_num_rows($resultado1);
+  if($num>0)
+  echo "<script>alert('Ese email ya esta en uso.');history.back();</script>";
+  else{
+  $query="insert into Usuarios values ('".$email."','".$password."','".$nombre."','".$apellidos."','".$telefono."','".$direccion."','".$ciudad."','".$fecha_nac."','".$privilegio."')";
+  echo "<br>".$query."<br>";
+  $resultado=mysqli_query($db,$query);
+  if($resultado){
+      echo "<script>alert('Registro realizado con éxito');window.location.href='admin_site.php';</script>";
+      }
+  else   {
+    $error = mysqli_error($db);
+    echo "<script>alert('ERROR de SQL: ".$error."');</script>";
+  }
+      }
+  mysqli_close($db);
+}
+
+?>
     
     <script>
       // Inicializa el DatePicker para el campo de fecha

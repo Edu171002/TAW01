@@ -288,6 +288,7 @@ header {
 .shoppingcart-table{
   color: #CFCDCA;
   padding: 20px;
+  text-align: left;
 }
 
 /* Style for the product grid */

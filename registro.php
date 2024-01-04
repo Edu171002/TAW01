@@ -7,25 +7,25 @@ session_start();
                     <div class="col-50">
                       <h3>Dirección de facturación</h3>
                       <label for="nombre"><i class="fa fa-user"></i> Nombre</label>
-                      <input type="text" id="fname" name="nombre" placeholder="Estudiante">
+                      <input type="text" id="fname" name="nombre" placeholder="Estudiante" maxlength="60">
 
                       <label for="apellidos"><i class="fa fa-user"></i>Apellidos</label>
-                      <input type="text" id="fname" name="apellidos" placeholder="Estudiante">
+                      <input type="text" id="fname" name="apellidos" placeholder="Estudiante" maxlength="60">
 
                       <label for="email"><i class="fa fa-envelope"></i>Email</label>
-                      <input type="text" id="email" name="email" placeholder="estudiante@example.com">
+                      <input type="text" id="email" name="email" placeholder="estudiante@example.com" maxlength="100">
 
                       <label for="telefono"><i class="fa fa-envelope"></i>telefono</label>
                       <input type="text" id="telefono" name="telefono" placeholder="1234567">
 
                       <label for="direccion"><i class="fa fa-envelope"></i>Direccion</label>
-                      <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1">
+                      <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1" maxlength="100">
 
                       <label for="ciudad"><i class="fa fa-envelope"></i>ciudad</label>
-                      <input type="text" id="ciudad" name="ciudad" placeholder="ciudad">
+                      <input type="text" id="ciudad" name="ciudad" placeholder="ciudad" maxlength="610">
 
                       <label for="password"><i class="fa fa-address-card-o"></i> Contraseña</label>
-                      <input type="password" id="password" name="password" placeholder="Contraseña">
+                      <input type="password" id="password" name="password" placeholder="Contraseña" maxlength="20">
                       
                       <label for="fecha_nac"><i class="fa fa-institution"></i>Fecha de nacimiento</label>
                       <input type="text" id="fecha_nac" name="fecha_nac" placeholder="2000-12-12">

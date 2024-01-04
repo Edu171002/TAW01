@@ -9,9 +9,10 @@ $query = "DELETE FROM usuarios WHERE email='$email'";
 $resultado = mysqli_query($db, $query);
 
 if ($resultado) {
-    echo "Usuario eliminado correctamente.";
+    echo "<script>alert('Usuario eliminado con éxito');window.location.href='mostrar_usuarios.php';</script>";
+      
 } else {
-    echo "Error al eliminar usuario: " . mysqli_error($db);
+      echo "<script>alert('ERROR DE SQL: ".mysqli_error($db)."');window.location.href='mostrar_usuarios.php';</script>";
 }
 
 // Cierra la conexión si es necesario

@@ -19,13 +19,13 @@ $total = 0;
     ?> 
 
     <table class="shoppingcart-table" id="shoppingcart-table">
-    <thead>
+    <thead style="text-align: left">
       <tr>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>Cantidad</th>
-          <th>Subtotal</th>
-          <th> </th>    
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Subtotal</th>
+        <th> </th>    
       </tr>
     </thead>
     <tbody>
@@ -45,7 +45,6 @@ $total = 0;
             $total += $subtotal;
       ?>
           <tr>
-                <td><a href="producto.php?id_producto=<?php echo $producto['id_producto'];?>"></a></td>
                 <td><?php echo $row['nombre']; ?></td>
                 <td><?php echo $row['precio']; ?></td>
                 <td><?php echo $cantidad; ?></td>
@@ -54,17 +53,21 @@ $total = 0;
           </tr>
       <?php
       $_SESSION['precio_total']=$total;
-
+      
+      }
       echo  '</tbody>';
       echo  '</table>';
-      echo  '<p>Total: <?php echo $total;?></p>';
-      echo  '<a href="checkout.php">Finalizar compra</a>';
-      }
+
 
       if($carroVacio){
         ?>
         <h2>El carrito está vacío</h2>
         <script>document.getElementById('shoppingcart-table').style.opacity=0;</script>
+        <?php
+      } else{
+        ?>
+        <p>Total: <?php echo $total;?></p>
+        <a href="checkout.php">Finalizar compra</a>
         <?php
       }
 

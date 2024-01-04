@@ -7,7 +7,8 @@ $query="select * from productos";
 $resultado=mysqli_query($db,$query);
 $num=mysqli_num_rows($resultado);
 
-echo "Num:..." . $num;
+echo '<p><a href="admin_site.php">Volver</a></p>';
+echo "Número de productos:" . $num;
 
 echo "<table border='1'>";
 echo "<tr>";
@@ -22,8 +23,8 @@ for($i=0;$i<$num;$i++){
     echo "<td>" . $row['descripcion'] . "</td>";
     echo "<td>" . $row['precio'] . "</td>";
     echo "<td>" . $row['categoria'] . "</td>";
-    echo "<td> <a href='modificar_producto.php?id_producto=" . $row['id_producto'] . "'>Modificar </a></td>";
-    echo "<td> <a href='borrar_producto.php?id_producto=" . $row['id_producto'] . "'>Eliminar </a></td>";
+    echo "<td> <a href='modificar_producto.php?id_producto=" . $row['id_producto']. "'>Modificar </a></td>";
+    echo "<td> <a href='borrar_producto.php?id_producto=" . $row['id_producto']. "'>Eliminar </a></td>";
     echo "</tr>";
 
 }

@@ -4,14 +4,15 @@ include('conexBD.php');
 
 $id_producto = $_GET['id_producto'];
 
-// Eliminar usuario de la base de datos
+// Eliminar producto de la base de datos
 $query = "DELETE FROM productos WHERE id_producto='$id_producto'";
 $resultado = mysqli_query($db, $query);
 
 if ($resultado) {
-    echo "Producto eliminado correctamente.";
+    echo "<script>alert('Producto eliminado con éxito');window.location.href='mostrar_productos_admin.php';</script>";
+      
 } else {
-    echo "Error al eliminar Producto: " . mysqli_error($db);
+      echo "<script>alert('ERROR DE SQL: ".mysqli_error($db)."');window.location.href='mostrar_productos_admin.php';</script>";
 }
 
 // Cierra la conexión si es necesario
