@@ -27,39 +27,39 @@
                 <div class="large_form-grid">
                   <div class="form">
                     <label for="nombre"><i class=""></i> Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" maxlength="60">
                   </div>
                   <div class="form">
                     <label for="apellidos"><i class=""></i> Apellidos</label>
-                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos">
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" maxlength="60">
                   </div>
                   <div class="form">
                     <label for="email"><i class=""></i> Email</label>
-                    <input type="text" id="email" name="email" placeholder="estudiante@example.com">
+                    <input type="text" id="email" name="email" placeholder="estudiante@example.com" maxlength="100">
                   </div>
                   <div class="form">
                     <label for="telefono"><i class=""></i> Telefono</label>
-                    <input type="text" id="telefono" name="telefono" placeholder="1234567">
+                    <input type="text" id="telefono" name="telefono" placeholder="612345678" maxlength="15">
                   </div>
                   <div class="form">
                     <label for="direccion"><i class=""></i> Direccion</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1">
+                    <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1" maxlength="100">
                   </div>
                   <div class="form">
                     <label for="ciudad"><i class=""></i> Ciudad</label>
-                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" maxlength="100">
                   </div>
                   <div class="form">
                     <label for="password"><i class=""></i>Password</label>
-                    <input type="password" id="password" name="password" placeholder="Password">
+                    <input type="password" id="password" name="password" placeholder="Password" maxlength="20">
                   </div>
                   <div class="form">  
                     <label for="fecha_nac"><i class=""></i> Fecha de nacimiento</label>
-                    <input type="text" id="fecha_nac" name="fecha_nac" placeholder="Selecciona una fecha">
+                    <input type="text" id="fecha_nac" name="fecha_nac" placeholder="Selecciona una fecha" maxlength="12">
                   </div>
                   <div class="form">  
                     <label for="privilegio"><i class=""></i>Privilegio</label>
-                    <input type="tinyint" id="privilegio" name="privilegio" placeholder="1 o 2">
+                    <input type="tinyint" id="privilegio" name="privilegio" placeholder="1 o 2" maxlength="1">
                   </div>
                 </div>
                 <div class="form"> 

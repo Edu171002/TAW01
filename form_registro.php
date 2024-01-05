@@ -63,35 +63,35 @@ if (@isset($_POST['login_button'])) {
                 <div class="large_form-grid">
                   <div class="form">
                     <label for="nombre"><i class="fa fa-user"></i> Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Estudiante">
+                    <input type="text" id="nombre" name="nombre" placeholder="Estudiante" maxlength="60">
                   </div>
                   <div class="form">
                     <label for="apellidos"><i class="fa fa-user"></i> Apellidos</label>
-                    <input type="text" id="apellidos" name="apellidos" placeholder="Estudiante">
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Estudiante" maxlength="60">
                   </div>
                   <div class="form">
                     <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                    <input type="text" id="email" name="email" placeholder="estudiante@example.com">
+                    <input type="text" id="email" name="email" placeholder="estudiante@example.com" maxlength="100">
                   </div>
                   <div class="form">
                     <label for="telefono"><i class="fa fa-envelope"></i> Teléfono</label>
-                    <input type="text" id="telefono" name="telefono" placeholder="1234567">
+                    <input type="text" id="telefono" name="telefono" placeholder="623451789" maxlength="15">
                   </div>
                   <div class="form">
                     <label for="direccion"><i class="fa fa-envelope"></i> Dirección</label>
-                    <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1">
+                    <input type="text" id="direccion" name="direccion" placeholder="Calle aleatoria numero 1" maxlength="100">
                   </div>
                   <div class="form">
                     <label for="ciudad"><i class="fa fa-envelope"></i> Ciudad</label>
-                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad">
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ciudad" maxlength="100">
                   </div>
                   <div class="form">
                     <label for="password"><i class="fa fa-address-card-o"></i> Contraseña</label>
-                    <input type="password" id="password" name="password" placeholder="Contraseña">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" maxlength="20">
                   </div>
                   <div class="form">  
                     <label for="fecha_nac"><i class="fa fa-institution"></i> Fecha de nacimiento</label>
-                    <input type="text" id="fecha_nac" name="fecha_nac" placeholder="Selecciona una fecha">
+                    <input type="text" id="fecha_nac" name="fecha_nac" placeholder="Selecciona una fecha"  maxlength="12">
                   </div>
                 </div>
                 <div class="form"> 

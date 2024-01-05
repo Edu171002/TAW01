@@ -12,17 +12,17 @@ session_start();
             <input type="text" id="fname" name="nombre" placeholder="Nombre" maxlength="30" required>
 
             <label for="Descripcion"><i class="fa fa-user"></i>Descripcion</label>
-            <input type="text" id="fname" name="descripcion" placeholder="Descripcion" required>
+            <input type="text" id="fname" name="descripcion" placeholder="Descripcion"  maxlength="1000" required>
 
 
             <label for="Peso"><i class="fa fa-envelope"></i>Peso</label>
             <input type="text" id="Peso" name="peso" placeholder="500g" maxlength="5" required>
 
             <label for="precio"><i class="fa fa-envelope"></i>Precio</label>
-            <input type="float" id="precio" name="precio" placeholder="50" required>
+            <input type="float" id="precio" name="precio" placeholder="50" maxlength="9" required>
 
             <label for="categoria"><i class="fa fa-institution"></i>Cafeina</label>
-            <input type="tinyint" id="categoria" name="categoria" placeholder="1 o 2" required>
+            <input type="tinyint" id="categoria" name="categoria" placeholder="1 o 2" maxlength="1" required>
   
         <input type="submit" value="Insertar" name="Insertar" class="btn">
 </form>

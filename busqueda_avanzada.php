@@ -63,20 +63,20 @@ if (@isset($_POST['login_button'])) {
                 <div class="large_form-grid">
                     <div class="form">
                         <label for="nombre">Nombre:</label>
-                        <input type="text" id="keyword" name="nombre">
+                        <input type="text" id="keyword" name="nombre" maxlength="30">
                     </div><div class="form">
                         <label for="descripcion">Descripción:</label>
-                        <input type="text" id="keyword" name="descripcion">
+                        <input type="text" id="keyword" name="descripcion" maxlength="1000">
                     </div><div class="form">
                         <label for="precioMin">Precio desde:</label>
-                        <input type="number" id="precioMin" name="precioMin" min="0">
+                        <input type="number" id="precioMin" name="precioMin" min="0" maxlength="9">
                         <label for="precioMax">hasta:</label>
-                        <input type="number" id="precioMax" name="precioMax" min="0">
+                        <input type="number" id="precioMax" name="precioMax" min="0" maxlength="9">
                     </div><div class="form">
                         <label for="pesoMin">Peso desde:</label>
-                        <input type="number" id="pesoMin" name="pesoMin" min="0">
+                        <input type="number" id="pesoMin" name="pesoMin" min="0" maxlength="5">
                         <label for="pesoMax">hasta:</label>
-                        <input type="number" id="pesoMax" name="pesoMax" min="0">
+                        <input type="number" id="pesoMax" name="pesoMax" min="0" maxlength="5">
                     </div><div class="form">
                         <label for="cafeina">Cafeina:</label>
                         <select id="cafeina" name="cafeina">

@@ -27,19 +27,19 @@ if ($selectResult) {
               <p><a href="mostrar_productos_admin.php">Volver</a></p>
               <h3>Modificacion producto</h3>
               <label for="nombre"><i class="fa fa-user"></i> Nombre</label>
-              <input type="text" id="fname" name="nombre" value="<?php echo $nombre; ?>" required>
+              <input type="text" id="fname" name="nombre" value="<?php echo $nombre; ?>" maxlength="30" required>
 
               <label for="Descripcion"><i class="fa fa-user"></i>Descripcion</label>
-              <input type="text" id="fname" name="descripcion" value="<?php echo $descripcion; ?>" required>
+              <input type="text" id="fname" name="descripcion" value="<?php echo $descripcion; ?>" maxlength="1000" required>
 
               <label for="Peso"><i class="fa fa-envelope"></i>Peso</label>
-              <input type="text" id="Peso" name="peso" value="<?php echo $peso; ?>" required>
+              <input type="text" id="Peso" name="peso" value="<?php echo $peso; ?>" maxlength="5" required>
 
               <label for="precio"><i class="fa fa-envelope"></i>Precio</label>
-              <input type="float" id="precio" name="precio" value="<?php echo $precio; ?>" required>
+              <input type="float" id="precio" name="precio" value="<?php echo $precio; ?>" max="9999" maxlength="5" required>
 
               <label for="categoria"><i class="fa fa-institution"></i>Cafeina</label>
-              <input type="tinyint" id="categoria" name="categoria" value="<?php echo $categoria; ?>" required>
+              <input type="tinyint" id="categoria" name="categoria" value="<?php echo $categoria; ?>" maxlength="1" required>
   
           <input type="submit" value="Aplicar" name="Aplicar" class="btn">
         </form><br>

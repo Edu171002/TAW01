@@ -32,29 +32,29 @@ if ($selectResult) {
               <p><a href="mostrar_usuarios.php">Volver</a></p>
               <h3>Modificacion usuario</h3>
               <label for="nombre"><i class="fa fa-user"></i> Nombre</label>
-              <input type="text" id="fname" name="nombre" value="<?php echo $nombre; ?>" required>
+              <input type="text" id="fname" name="nombre" value="<?php echo $nombre; ?>" maxlength="60" required>
 
               <label for="apellidos"><i class="fa fa-user"></i>Apellidos</label>
-              <input type="text" id="fname" name="apellidos" value="<?php echo $apellidos; ?>" required>
+              <input type="text" id="fname" name="apellidos" value="<?php echo $apellidos; ?>" maxlength="60" required>
 
 
               <label for="telefono"><i class="fa fa-envelope"></i>telefono</label>
-              <input type="text" id="telefono" name="telefono" value="<?php echo $telefono; ?>" required>
+              <input type="text" id="telefono" name="telefono" value="<?php echo $telefono; ?>" maxlength="15" required>
 
               <label for="direccion"><i class="fa fa-envelope"></i>Direccion</label>
-              <input type="text" id="direccion" name="direccion" value="<?php echo $direccion; ?>" required>
+              <input type="text" id="direccion" name="direccion" value="<?php echo $direccion; ?>" maxlength="100" required>
 
               <label for="ciudad"><i class="fa fa-envelope"></i>ciudad</label>
-              <input type="text" id="ciudad" name="ciudad" value="<?php echo $ciudad; ?>" required>
+              <input type="text" id="ciudad" name="ciudad" value="<?php echo $ciudad; ?>" maxlength="100" required>
 
               <label for="pass"><i class="fa fa-address-card-o"></i> Contraseña</label>
-              <input type="pass" id="pass" name="pass" value="<?php echo $pass; ?>" required>
+              <input type="pass" id="pass" name="pass" value="<?php echo $pass; ?>" maxlength="20" required>
               
               <label for="fecha_nac"><i class="fa fa-institution"></i>Fecha de nacimiento</label>
-              <input type="text" id="fecha_nac" name="fecha_nac" value="<?php echo $fecha_nac; ?>" required>
+              <input type="text" id="fecha_nac" name="fecha_nac" value="<?php echo $fecha_nac; ?>" maxlength="12" required>
 
               <label for="privilegio"><i class="fa fa-institution"></i>Tipo de usuario</label>
-              <input type="tinyint" id="privilegioc" name="privilegio" value="<?php echo $privilegio; ?>" required>
+              <input type="tinyint" id="privilegioc" name="privilegio" value="<?php echo $privilegio; ?>" maxlength="1" required>
   
           <input type="submit" value="Aplicar" class="btn" name="Aplicar">
         </form><br>
