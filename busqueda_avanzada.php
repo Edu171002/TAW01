@@ -69,9 +69,9 @@ if (@isset($_POST['login_button'])) {
                         <input type="text" id="keyword" name="descripcion" maxlength="1000">
                     </div><div class="form">
                         <label for="precioMin">Precio desde:</label>
-                        <input type="number" id="precioMin" name="precioMin" min="0" maxlength="9">
+                        <input type="number" id="precioMin" name="precioMin" min="0" maxlength="5">
                         <label for="precioMax">hasta:</label>
-                        <input type="number" id="precioMax" name="precioMax" min="0" maxlength="9">
+                        <input type="number" id="precioMax" name="precioMax" min="0" maxlength="5">
                     </div><div class="form">
                         <label for="pesoMin">Peso desde:</label>
                         <input type="number" id="pesoMin" name="pesoMin" min="0" maxlength="5">
